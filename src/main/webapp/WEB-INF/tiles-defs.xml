@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : tiles-defs.xml
+    Created on : July 2, 2009, 7:04 PM
+    Author     : Srini
+    Description:
+        Contains tiles definitions
+-->
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+    <definition name="default" template="/WEB-INF/views/layout/layout.jsp" preparer="tilesViewPreparer">
+        <put-attribute name="title" value="Fakebook" />
+        <put-attribute name="header" value="/WEB-INF/views/layout/header.jsp" />
+        <put-attribute name="navigation" value="/WEB-INF/views/layout/navigation.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/views/layout/menu.jsp" />    
+        <put-attribute name="footer" value="/WEB-INF/views/layout/footer.jsp" />
+    </definition>
+    <definition name="*/*" extends="default">
+        <put-attribute name="body" value="/WEB-INF/views/{1}/{2}.jsp" />
+    </definition>  
+    <definition name="*" extends="default">
+        <put-attribute name="body" value="/WEB-INF/views/{1}.jsp" />
+    </definition>
+    <definition name="common/login" template="/WEB-INF/views/common/login.jsp"/>
+    <definition name="common/invalidSession" template="/WEB-INF/views/common/invalidSession.jsp"/>
+    <definition name="layout/bgimg" template="/WEB-INF/views/layout/bgimg.jsp"/>
+    <definition name="errors/403" template="/WEB-INF/views/errors/403.jsp"/>
+</tiles-definitions>
