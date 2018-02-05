@@ -1,0 +1,273 @@
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 1px 5px !important;
+}
+
+p, ul, ol {
+    margin-top: 0;
+    line-height: 200%;
+    font-family: "Trebuchet MS", Georgia, "Times New Roman", Times, serif;
+}
+
+ul, ol {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #516C00;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/*
+* accordion menu
+**/
+
+.accordion > li > a{
+    font-size: 15px;
+    height: 30px;
+    list-style-position: inside;
+    border: 1px solid #5A4F4F;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: .01em;
+    margin: 0px;
+    padding-left: 10px;
+    background: #E0E0E0 url('/images/border.png') repeat-y;
+}
+.accordion > li:hover > a,
+.accordion > li:target > a,
+.accordion > li > a.active {
+    padding-left: 10px !important;
+    text-decoration: none !important;
+    color: #0000ff !important;
+    width: 100%;
+    text-shadow: 1px 1px 1px rgba(255,255,255, .2);
+    background: -moz-linear-gradient(top,  #FAFAFA 0%,  100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FAFAFA), color-stop(100%,#478ACD));
+    background:  -webkit-linear-gradient(top, #FAFAFA 0%,rgba(42, 60, 157, 0.44) 100%);
+    background: -o-linear-gradient(top,  #FAFAFA 0%,#478ACD 100%);
+    background: -ms-linear-gradient(top,  #FAFAFA 0%,#478ACD 100%);
+    background: linear-gradient(top,  #FAFAFA 0%,#478ACD 100%);
+}
+.accordion > li:hover > a span,
+.accordion > li:target > a span,
+.accordion > li > a.active span {
+    color: #FFFFFE !important;
+    text-shadow: 0px 1px 0px rgba(0,0,0, .35);
+    background: #3e5706;
+}
+
+.accordion li.files > a:before { background-position: 0px 0px; }
+.accordion li.files:hover > a:before,
+.accordion li.files:target > a:before,
+.accordion li.files > a.active:before { background-position: 0px -24px; }
+
+.accordion li.mail > a:before { background-position: -24px 0px; }
+.accordion li.mail:hover > a:before,
+.accordion li.mail:target > a:before,
+
+.accordion li.mail > a.active:before { background-position: -24px -24px; }
+.accordion li.cloud > a:before { background-position: -48px 0px; }
+.accordion li.cloud:hover > a:before,
+.accordion li.cloud:target > a:before,
+.accordion li.cloud > a.active:before { background-position: -48px -24px; }
+
+.accordion li.sign > a:before { background-position: -72px 0px; }
+.accordion li.sign:hover > a:before,
+.accordion li.sign:target > a:before,
+.accordion li.sign > a.active:before { background-position: -72px -24px; }
+.accordion li > .sub-menu {
+    display: none;
+    text-decoration: none !important;
+    font-size: 14px;
+    padding-left: 10px !important;
+    background: #FAFAFA url('/images/border.png') repeat-y;
+}
+
+.accordion li:target > .sub-menu {
+    display: block;
+    text-decoration: none !important;
+}
+.accordion a{
+    display: block !important;
+    color: #2c374c !important;
+    font-weight: lighter !important;
+    font-size: 15px !important;
+    font-family: Microsoft Sans Serif !important;
+}
+.tdStyle{
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #f9f9f9), color-stop(100%, #e9e9e9) );
+    background:-moz-linear-gradient( center top, #f9f9f9 5%, #e9e9e9 100% );
+    background:-ms-linear-gradient( top, #f9f9f9 5%, #e9e9e9 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#e9e9e9');
+    background-color:#f9f9f9;
+    color:#666666;
+    text-shadow:1px 1px 0px #ffffff;
+    -webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;
+    -moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
+    box-shadow:inset 1px 1px 0px 0px #ffffff;
+}
+/***
+User Profile Sidebar by @keenthemes
+A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themeforest: http://j.mp/metronictheme
+Licensed under MIT
+***/
+html, body {
+    margin: 0px;
+    padding: 0px;
+    min-height: 100%;
+    height: 100%;
+}
+#wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -50px; /* the bottom margin is the negative value of the footer's height */
+    position: relative
+}
+#footer {
+    height: 50px;
+}
+#footer-content {
+    border: 1px solid magenta;
+    height: 32px; /* height + top/bottom paddding + top/bottom border must add up to footer height */
+    padding: 8px;
+}
+.push {
+    height: 50px;
+    clear: both;
+}
+
+#header {
+    height: 0px;
+}
+#header-content {
+    border: 1px solid magenta;
+    height: 32px; /* height + top/bottom paddding + top/bottom border must add up to footer height */
+    padding: 8px;
+}
+#content {
+    height: 100%;
+}
+#sidebar {
+    border: 1px solid skyblue;
+    width: 100px;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    bottom: 50px;
+}
+#main {
+    margin-left: 102px
+}
+
+/* Profile container */
+.profile {
+    margin: 10px 0;
+}
+
+/* Profile sidebar */
+.profile-sidebar {
+    padding: 0px 0 10px 0;
+}
+
+.profile-userpic img {
+    float: none;
+    margin: 0 auto;
+    width: 50%;
+    height: 50%;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
+}
+
+.profile-usertitle {
+    margin-left: 10px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.profile-usertitle-name {
+    color: #f2f6f6;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.profile-usertitle-job {
+    text-transform: uppercase;
+    color: #5b9bd1;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.profile-userbuttons {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.profile-userbuttons .btn {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 6px 15px;
+    margin-right: 5px;
+}
+
+.profile-userbuttons .btn:last-child {
+    margin-right: 0px;
+}
+
+.profile-usermenu {
+    margin-top: 30px;
+}
+
+.profile-usermenu ul li {
+    border-bottom: 1px solid #f0f4f7;
+}
+
+.profile-usermenu ul li:last-child {
+    border-bottom: none;
+}
+
+.profile-usermenu ul li a {
+    color: #fcfcfc;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.profile-usermenu ul li a i {
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.profile-usermenu ul li:hover {
+    background: #478ACD;
+    color: #5b9bd1;
+}
+
+.profile-usermenu ul li.active {
+    border-bottom: none;
+}
+
+.profile-usermenu ul li.active a {
+    color: #5b9bd1;
+    background-color: #f6f9fb;
+    border-left: 2px solid #5b9bd1;
+    margin-left: -2px;
+}
+
+/* Profile Content */
+.profile-content {
+    padding: 20px;
+    background: #fff;
+    min-height: 460px;
+}

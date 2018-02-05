@@ -1,0 +1,18 @@
+package com.sitec.cpse.common;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+/**
+ *
+ * @author Asu
+ */
+@Controller
+public class HomeController {
+
+    @RequestMapping(value = "/home.htm")
+    public String getHomePage(Model m) {
+        return "common/home";
+    }
+}
