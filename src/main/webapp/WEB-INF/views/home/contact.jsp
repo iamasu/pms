@@ -56,13 +56,13 @@
                         <div class="div-body">
                             <table>
                                 <tr>
-                                    <td><sf:input cssStyle="width:50%;" required='true' placeholder='Enter Your Name' path="subject"/></td>
+                                    <td><input cssStyle="width:50%;" required='true' placeholder='Enter Your Name' name="subject"/></td>
                                 </tr>
                                 <tr>
-                                    <td><sf:input cssStyle="width:50%;" required='true' placeholder='Enter Email' path="replyTo"/></td>
+                                    <td><input cssStyle="width:50%;" required='true' placeholder='Enter Email' name="replyTo"/></td>
                                 </tr>
                                 <tr>
-                                    <td><sf:textarea path="text" id="sentMessage"/></td>
+                                    <td><textarea name="text" id="sentMessage"/></td>
                                 </tr>
                             </table>
                         </div>

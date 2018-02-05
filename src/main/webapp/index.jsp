@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib  uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -31,7 +32,7 @@
         <div class="header"></div>
         <div style="padding-top: 56px;">
             <div  style="float: left;">
-';l'l''
+                <c:import url="/u/aboutme"/>
             </div>
             <div style="float: left;">
 
