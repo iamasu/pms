@@ -33,8 +33,8 @@ public class SecurityFilter implements Filter {
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse res = (HttpServletResponse) response;
         String uri = req.getRequestURI();
-        if (uri.equals("/login.htm") || uri.equals("/invalidSession.htm") || uri.startsWith("/images/") || uri.startsWith("/css/") || uri.startsWith("/scripts/") || uri.startsWith("/eprocws/")) {
-            if (uri.equals("/login.htm") &&  req.getSession().getAttribute("__user__") != null) {
+        if (uri.startsWith("/u/") || uri.equals("/login.htm") || uri.equals("/sessionout.htm") || uri.startsWith("/images/") || uri.startsWith("/css/") || uri.startsWith("/scripts/") || uri.startsWith("/eprocws/")) {
+            if (uri.equals("/login.htm") && req.getSession().getAttribute("__user__") != null) {
                 res.sendRedirect("/home.htm");
             }
         } else {

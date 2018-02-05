@@ -12,8 +12,93 @@
        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
        "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
 <tiles-definitions>
+    
+    <definition name="home/*" template="/WEB-INF/views/home/layout.jsp">
+        <put-attribute name="header" value="/WEB-INF/views/home/header.jsp" />
+        <put-attribute name="topbar" value="/WEB-INF/views/home/topbar.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/home/{1}.jsp" />    
+        <put-attribute name="footer" value="/WEB-INF/views/home/footer.jsp" />
+    </definition>
+    
+    <definition name="ra/*" template="/WEB-INF/views/ra/layout.jsp">
+        <put-attribute name="header" value="/WEB-INF/views/ra/header.jsp" />
+        <put-attribute name="sidebar" value="/WEB-INF/views/ra/sidebar.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/ra/{1}.jsp" />    
+    </definition>
+    
+    <definition name="mobile/home/*" template="/WEB-INF/views/mobile/home/layout.jsp">
+        <put-attribute name="header" value="/WEB-INF/views/mobile/home/header.jsp" />
+        <put-attribute name="sidebar" value="/WEB-INF/views/mobile/home/sidebar.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/mobile/home/{1}.jsp" />    
+        <put-attribute name="footer" value="/WEB-INF/views/mobile/home/footer.jsp" />
+    </definition>
+    
+    <definition name="tablet/home/*" template="/WEB-INF/views/tablet/home/layout.jsp">
+        <put-attribute name="header" value="/WEB-INF/views/tablet/home/header.jsp" />
+        <put-attribute name="sidebar" value="/WEB-INF/views/tablet/home/sidebar.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/tablet/home/{1}.jsp" />    
+        <put-attribute name="footer" value="/WEB-INF/views/tablet/home/footer.jsp" />
+    </definition>
+    
+    <definition name="profile/*" template="/WEB-INF/views/profile/layout.jsp" preparer="tilesViewPreparer">
+        <put-attribute name="title" value="PMS"/>
+        <put-attribute name="header" value="/WEB-INF/views/profile/header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/views/profile/sidebar.jsp" />
+        <put-attribute name="home" value="/WEB-INF/views/profile/home.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/profile/{1}.jsp" />    
+        <put-attribute name="footer" value="/WEB-INF/views/profile/footer.jsp" />
+    </definition>
+    
+    <definition name="mobile/profile/*" template="/WEB-INF/views/mobile/profile/layout.jsp" preparer="tilesViewPreparer">
+        <put-attribute name="title" value="PMS"/>
+        <put-attribute name="header" value="/WEB-INF/views/mobile/profile/header.jsp" />
+        <put-attribute name="left" value="/WEB-INF/views/mobile/profile/left.jsp"/>
+        <put-attribute name="home" value="/WEB-INF/views/mobile/profile/home.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/mobile/profile/{1}.jsp" /> 
+        <put-attribute name="right" value="/WEB-INF/views/mobile/profile/right.jsp"/>   
+        <put-attribute name="footer" value="/WEB-INF/views/mobile/profile/footer.jsp" />
+    </definition>
+    
+    <definition name="mail/*" template="/WEB-INF/views/mail/mailbox.jsp" preparer="tilesViewPreparer">
+        <put-attribute name="title" value="PMS"/>
+        <put-attribute name="header" value="/WEB-INF/views/layout/header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/views/mail/sidebar.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/mail/{1}.jsp" />    
+        <put-attribute name="footer" value="/WEB-INF/views/layout/footer.jsp" />
+    </definition>
+     
+    <definition name="mobile/*/*" template="/WEB-INF/views/mobile/layout/layout.jsp" preparer="tilesViewPreparer">
+        <put-attribute name="title" value="PMS"/>
+        <put-attribute name="header" value="/WEB-INF/views/mobile/layout/header.jsp"/>
+        <put-attribute name="left" value="/WEB-INF/views/mobile/layout/left.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/views/mobile/{1}/{2}.jsp" /> 
+        <put-attribute name="right" value="/WEB-INF/views/mobile/layout/right.jsp"/>
+        <put-attribute name="footer" value="/WEB-INF/views/mobile/layout/footer.jsp" />   
+    </definition>
+    
+    <definition name="tablet/*/*" template="/WEB-INF/views/tablet/layout/layout.jsp" preparer="tilesViewPreparer">  
+        <put-attribute name="title" value="PMS"/>
+        <put-attribute name="header" value="/WEB-INF/views/tablet/layout/header.jsp"/>
+        <put-attribute name="menu" value="/WEB-INF/views/tablet/layout/menu.jsp"/>   
+        <put-attribute name="body" value="/WEB-INF/views/tablet/{1}/{2}.jsp" />  
+        <put-attribute name="footer" value="/WEB-INF/views/tablet/layout/footer.jsp" />  
+    </definition>
+    
+    <definition name="*/mail/*" template="/WEB-INF/views/mail/compose.jsp" preparer="tilesViewPreparer">
+        <put-attribute name="title" value="PMS"/>
+        <put-attribute name="header" value="/WEB-INF/views/layout/header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/views/mail/sidebar.jsp" />
+        <put-attribute name="navigation" value="/WEB-INF/views/mail/navigation.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/{1}/mail/{2}.jsp" />    
+        <put-attribute name="footer" value="/WEB-INF/views/mail/footer.jsp" />
+    </definition>
+    <definition name="*/popup/*" template="/WEB-INF/views/popup/popup.jsp">
+        <put-attribute name="title" value="PMS"/>
+        <put-attribute name="body" value="/WEB-INF/views/{1}/popup/{2}.jsp" />    
+    </definition>
+    
     <definition name="default" template="/WEB-INF/views/layout/layout.jsp" preparer="tilesViewPreparer">
-        <put-attribute name="title" value="Fakebook" />
+        <put-attribute name="title" value="PMS" />
         <put-attribute name="header" value="/WEB-INF/views/layout/header.jsp" />
         <put-attribute name="navigation" value="/WEB-INF/views/layout/navigation.jsp" />
         <put-attribute name="menu" value="/WEB-INF/views/layout/menu.jsp" />    
@@ -24,9 +109,40 @@
     </definition>  
     <definition name="*" extends="default">
         <put-attribute name="body" value="/WEB-INF/views/{1}.jsp" />
-    </definition>
+    </definition>   
+    
+    <definition name="common/about" template="/WEB-INF/views/common/about.jsp"/>
+    <definition name="common/contact" template="/WEB-INF/views/common/contact.jsp"/>
+    <definition name="common/projects" template="/WEB-INF/views/common/projects.jsp"/>
+    <definition name="common/myresume" template="/WEB-INF/views/common/myresume.jsp"/>
+    
+    <definition name="mobile/common/about" template="/WEB-INF/views/mobile/common/about.jsp"/>
+    <definition name="mobile/common/contact" template="/WEB-INF/views/mobile/common/contact.jsp"/>
+    <definition name="mobile/common/projects" template="/WEB-INF/views/mobile/common/projects.jsp"/>
+    <definition name="mobile/common/myresume" template="/WEB-INF/views/mobile/common/myresume.jsp"/>
+    
+    <definition name="tablet/common/about" template="/WEB-INF/views/tablet/common/about.jsp"/>
+    <definition name="tablet/common/contact" template="/WEB-INF/views/tablet/common/contact.jsp"/>
+    <definition name="tablet/common/projects" template="/WEB-INF/views/tablet/common/projects.jsp"/>
+    <definition name="tablet/common/myresume" template="/WEB-INF/views/tablet/common/myresume.jsp"/>
+    
     <definition name="common/login" template="/WEB-INF/views/common/login.jsp"/>
-    <definition name="common/invalidSession" template="/WEB-INF/views/common/invalidSession.jsp"/>
+    <definition name="mobile/common/login" template="/WEB-INF/views/mobile/common/login.jsp"/>
+    <definition name="tablet/common/login" template="/WEB-INF/views/tablet/common/login.jsp"/>
+    
+    <definition name="common/emoji" template="/WEB-INF/views/common/emoji.jsp"/>
+    <definition name="mobile/common/emoji" template="/WEB-INF/views/mobile/common/emoji.jsp"/>
+    <definition name="tablet/common/emoji" template="/WEB-INF/views/tablet/common/emoji.jsp"/>
+    
+    <definition name="mail/compose" template="/WEB-INF/views/mail/compose.jsp"/>
+    <definition name="common/sessionout" template="/WEB-INF/views/common/sessionout.jsp"/>
+    <definition name="mobile/common/sessionout" template="/WEB-INF/views/mobile/common/sessionout.jsp"/>
+    <definition name="tablet/common/sessionout" template="/WEB-INF/views/tablet/common/sessionout.jsp"/>
     <definition name="layout/bgimg" template="/WEB-INF/views/layout/bgimg.jsp"/>
     <definition name="errors/403" template="/WEB-INF/views/errors/403.jsp"/>
+    <definition name="errors/error" template="/WEB-INF/views/errors/error.jsp"/>
+    <definition name="mobile/errors/403" template="/WEB-INF/views/mobile/errors/403.jsp"/>
+    <definition name="mobile/errors/error" template="/WEB-INF/views/mobile/errors/error.jsp"/>
+    <definition name="tablet/errors/403" template="/WEB-INF/views/tablet/errors/403.jsp"/>
+    <definition name="tablet/errors/error" template="/WEB-INF/views/tablet/errors/error.jsp"/>
 </tiles-definitions>
