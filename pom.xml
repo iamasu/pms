@@ -182,7 +182,7 @@
                 <version>2.1.1</version>
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
-                    <outputDirectory>webapps</outputDirectory>
+                    <outputDirectory>deployments</outputDirectory>
                     <warName>ROOT</warName>
                 </configuration>
             </plugin>
