@@ -6,7 +6,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.env.Environment;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -19,7 +18,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @ComponentScan(basePackages = "com.pms")
 @Import({WebMvcConfig.class})
 @EnableScheduling
-@PropertySource(value = {"classpath:email.properties"})
 public class AppConfig {
 
     private static final Logger LOGGER = Logger.getLogger(AppConfig.class.getName());
