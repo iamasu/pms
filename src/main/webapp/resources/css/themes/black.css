@@ -1,5 +1,14 @@
-.menuContent{background: #003366 !important;}
+.header{background: #030f21  url(/images/asu.png) no-repeat !important;}
+.menuContent{background: #457EB7 !important;background: -webkit-linear-gradient(top, #457EB7 0%,#457EB7 87%,#457EB7 100%) !important;}
 .menuContent A:link, A:visited {
-  font-weight: normal;
-  text-decoration: none;
+    font-weight: normal;
+    text-decoration: none;
+}
+div-default > .div-heading {
+    background: #29273b !important;
+}
+.div-body th {
+    color: #09071a !important;
+    background: #ABB6FF !important;
+    text-transform: capitalize;
 }

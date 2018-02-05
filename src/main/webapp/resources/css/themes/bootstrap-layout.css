@@ -16,6 +16,10 @@ abbr[title]{border-bottom:1px dotted}
 b,strong{font-weight:700}
 dfn{font-style:italic}
 h1{font-size:2em;margin:.67em 0}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
 mark{background:#ff0;color:#000}
 small{font-size:80%}
 sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
@@ -47,10 +51,11 @@ textarea{overflow:auto}optgroup{font-weight:700}
 .div {
     margin-bottom: auto;
     background-color: #fafafa;
-    border: 1px solid transparent;
+    border: 0px solid transparent;
     border-radius: 0px;
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
     box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    overflow-x: hidden;
 }
 .div-heading {
     padding: 2px 6px;
@@ -65,11 +70,12 @@ textarea{overflow:auto}optgroup{font-weight:700}
     color: inherit;
     font-family: sans-serif;
     font-weight: lighter;
+    text-align: center;
 }
 .div-body {
-    padding-bottom: 20px;
+    padding-bottom: 0px;
     overflow: hidden;
-    min-height: 150px;
+    min-height: 0px;
     text-align: initial;
     width: available !important;
 }
@@ -82,14 +88,18 @@ textarea{overflow:auto}optgroup{font-weight:700}
     color: inherit;
 }
 .div-footer {
-    padding: 10px 15px;
+    padding: 30px 15px;
     background-color: #f5f5f5;
     border-top: 1px solid #ddd;
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px;
+    text-align: center;
 }
 .div-default {
     border-color: #ddd;
+    position: absolute;
+    overflow-x: hidden;
+    min-width: 100%;
 }
 .div-default > .div-heading {
     color: #FFFFFF;
@@ -229,6 +239,7 @@ textarea{overflow:auto}optgroup{font-weight:700}
     padding-bottom: 2px;
 }
 .div-body th{
+    white-space: nowrap;
     padding-left: 5px;
     vertical-align:middle;
     text-align:left;
@@ -238,16 +249,12 @@ textarea{overflow:auto}optgroup{font-weight:700}
     color: #333333;
     border:1px solid #cdcdcd;
     border-width:0px 1px 1px 0px;
-    background: #D1DCEC;
-    background-image: -moz-linear-gradient(top, #D1DCEC, #D1DCEC);
-    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #D1DCEC),color-stop(1, #D1DCEC));
-    background-image: -webkit-linear-gradient(top, #D1DCEC, #D1DCEC);
-    background-image: -ms-linear-gradient(top, #D1DCEC, #D1DCEC);
-    background-image: -o-linear-gradient(top, #D1DCEC, #D1DCEC);
-}.div-body tr:hover th{
-    border: 1px solid #a1acb9;
-    border-width:0px 1px 1px 0px;
-    background: #D1DCEC;
+    background: #D8E4F7;
+    background-image: -moz-linear-gradient(top, #D8E4F7, #D8E4F7);
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #D8E4F7),color-stop(1, #D8E4F7));
+    background-image: -webkit-linear-gradient(top, #D8E4F7, #D8E4F7);
+    background-image: -ms-linear-gradient(top, #D8E4F7, #D8E4F7);
+    background-image: -o-linear-gradient(top, #D8E4F7, #D8E4F7);
 }.div-body thead tr:first-child td{
     padding: 1px;
     background:-o-linear-gradient(bottom, #e6ebef 5%, #e6ebef 100%);
@@ -263,7 +270,6 @@ textarea{overflow:auto}optgroup{font-weight:700}
     border-left-width: 1px;
 }
 .div-body tr:last-child td{
-    padding-bottom: 10px;
     font-weight: lighter;
     color: #4c6478;
 }
@@ -273,6 +279,8 @@ textarea{overflow:auto}optgroup{font-weight:700}
     font-weight: lighter;
     color: #4c6478;
 }
+
+tr:focus { outline: none; }
 
 .cke_editable{
     width: auto;
@@ -336,9 +344,6 @@ textarea{overflow:auto}optgroup{font-weight:700}
 }
 
 input[type=text],[type=file] {
-    min-height:18px;
-    width: auto; 
-    border: groove 1px #FFF; 
     outline: 0; 
     font-family: Arial, Helvetica, sans-serif;  
     box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
@@ -355,10 +360,7 @@ select{
     color: #333 !important;
 }
 textarea{
-    width: auto;
-    height: auto;
-    border-radius: 3px;
-    border: 1px solid #CCC;
+    border: 1px solid #CCC !important;
     padding: 8px;
     font-weight: 200;
     font-family: Arial, Helvetica, sans-serif;
@@ -368,11 +370,11 @@ textarea{
     -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
 }
 input:hover {
-    background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #dfdfdf), color-stop(100%, #ededed) );
-    background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
-    background:-ms-linear-gradient( top, #dfdfdf 5%, #ededed 100% );
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
-    background-color:#dfdfdf;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #EEEEEE), color-stop(100%, #EEEEEE) );
+    background:-moz-linear-gradient( center top, #EEEEEE 5%, #EEEEEE 100% );
+    background:-ms-linear-gradient( top, #EEEEEE 5%, #EEEEEE 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#EEEEEE', endColorstr='#EEEEEE');
+    background-color:#EEEEEE;
 }
 
 /**
@@ -382,20 +384,21 @@ input:hover {
 .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
     padding:0px !important;
     border: 1px solid #ddd;
-    border-color: #D1DCEC !important;
+    border-color: #D8E4F7 !important;
 }
 .table>tbody>tr>th{
     width:min-content !important;
     color: #333333;
     border:1px solid #cdcdcd !important;
     border-width:1px 1px 1px 1px !important;
-    background: #D1DCEC;
-    background-image: -moz-linear-gradient(top, #D1DCEC, #D1DCEC);
-    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #D1DCEC),color-stop(1, #D1DCEC));
-    background-image: -webkit-linear-gradient(top, #D1DCEC, #D1DCEC);
-    background-image: -ms-linear-gradient(top, #D1DCEC, #D1DCEC);
-    background-image: -o-linear-gradient(top, #D1DCEC, #D1DCEC);
+    background: #D8E4F7;
+    background-image: -moz-linear-gradient(top, #D8E4F7, #D8E4F7);
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #D8E4F7),color-stop(1, #D8E4F7));
+    background-image: -webkit-linear-gradient(top, #D8E4F7, #D8E4F7);
+    background-image: -ms-linear-gradient(top, #D8E4F7, #D8E4F7);
+    background-image: -o-linear-gradient(top, #D8E4F7, #D8E4F7);
 }
+/*// chatting css*/
 .chat-sidebar{
     position: relative;
     height: 100%;
@@ -598,4 +601,38 @@ input:hover {
     float: right;
     font-size: 20px;
     line-height: 70%;
+}
+.custom{
+    background: #4c6478 !important;
+}
+.ui-widget-content {
+    background: #F7F8F9!important;
+}
+.FormData{border: 1px solid #DADADA;}
+.ui-jqdialog-content, .ui-jqdialog .ui-jqdialog-content {
+    padding: 0em .2em !important;
+}
+.CaptionTD{
+    padding-left: 5px;
+    vertical-align:middle !important;
+    text-align:left;
+    font-size:12px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    color: #333333;
+    border:1px solid #cdcdcd;
+    border-width:0px 1px 1px 0px;
+    background: #D8E4F7;
+    background-image: -moz-linear-gradient(top, #D8E4F7, #D8E4F7);
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #D8E4F7),color-stop(1, #D8E4F7));
+    background-image: -webkit-linear-gradient(top, #D8E4F7, #D8E4F7);
+    background-image: -ms-linear-gradient(top, #D8E4F7, #D8E4F7);
+    background-image: -o-linear-gradient(top, #D8E4F7, #D8E4F7);
+}
+.DataTD{
+    border: 1px solid #DADADA;
+    vertical-align: middle !important;
+}
+.ui-jqdialog {
+    padding: 0em !important;
 }
