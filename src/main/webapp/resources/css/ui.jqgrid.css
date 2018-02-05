@@ -1,8 +1,8 @@
 /*Grid*/
-.ui-jqgrid {position: relative; font-size:12px;}
+.ui-jqgrid {position: relative; font-size:12px;margin: -1px;padding: 0px;}
 .ui-jqgrid .ui-jqgrid-view {position: relative;left:0px; top: 0px; padding: .0em;}
 /* caption*/
-.ui-jqgrid .ui-jqgrid-titlebar {padding: .5em .5em .5em .5em;border-left: 0px none;border-right: 0px none; border-top: 0px none;}
+.ui-jqgrid .ui-jqgrid-titlebar {padding: .01em .01em .01em .01em;border-left: 0px none;border-right: 0px none; border-top: 0px none;}
 .ui-jqgrid .ui-jqgrid-title {margin: .1em 0 .2em; font-family: ABeeZee ;font-size: 16px;}
 .ui-jqgrid .ui-jqgrid-titlebar-close { position: absolute;top: 50%; width: 19px; margin: -10px 0 0 0; padding: 1px; height:18px;}
 .ui-jqgrid .ui-jqgrid-titlebar-close span { display: block; margin: 1px; }
@@ -14,7 +14,7 @@
 .ui-jqgrid .ui-jqgrid-htable th {height:22px;padding: 0 2px 0 2px;}
 .ui-jqgrid .ui-jqgrid-htable th div {overflow: hidden; position:relative; height:20px;}
 .ui-th-column, .ui-jqgrid .ui-jqgrid-htable th.ui-th-column {overflow: hidden;white-space: nowrap;text-align:center;border-top : 0px none;border-bottom : 0px none;}
-.ui-th-ltr, .ui-jqgrid .ui-jqgrid-htable th.ui-th-ltr {border-left : 0px none;font-size: 15px;background: #e6ebef;font-family: ABeeZee}
+.ui-th-ltr, .ui-jqgrid .ui-jqgrid-htable th.ui-th-ltr {border-left : 0px none;font-size: 15px;background: #D1DCEC;font-family: ABeeZee}
 .ui-th-rtl, .ui-jqgrid .ui-jqgrid-htable th.ui-th-rtl {border-right : 0px none;}
 .ui-jqgrid .ui-th-div-ie {white-space: nowrap; zoom :1; height:17px;}
 .ui-jqgrid .ui-jqgrid-resize {height:20px !important;position: relative; cursor :e-resize;display: inline;overflow: hidden;}
