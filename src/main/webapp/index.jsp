@@ -29,14 +29,6 @@
         <script type="text/javascript" src="/scripts/jquery.lazyload.min.js"></script>
     </head>
     <body>
-        <div class="header"></div>
-        <div style="padding-top: 56px;">
-            <div  style="float: left;">
-                <c:import url="/u/aboutme"/>
-            </div>
-            <div style="float: left;">
-
-            </div>
-        </div>
+        <c:import url="/u/aboutme"/>
     </body>
 </html>
